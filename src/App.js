@@ -28,7 +28,7 @@ function App() {
         if (i === p) {
           setCart([
             ...cart,
-            { name: item.name, price: item.price, quantity: item.quantity }
+            { name: item.name, price: item.price, quantity: 1/*item.quantity*/ }
           ]);
           return { ...item, inCart: true };
         }
