@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { CartTotals } from "./CartTotals";
 import { CartInfo } from "./CartInfo";
 import { Button } from "./Button";
- 
+
 export const CartDetails = ({
   cart,
   increaseQ,
@@ -38,7 +38,7 @@ const OpenWrapper = styled.div`
   top: 0;
   right: 0;
   z-index: 134;
-  background-color: rgb(777);
+  background-color: rgb(0,255,0);
   width: 320px;
   transform: translateX(${({ open }) => (open ? "0px" : "320px")});
   transition: transform 0.5s;

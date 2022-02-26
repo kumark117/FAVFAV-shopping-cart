@@ -34,7 +34,7 @@ const Column = styled.article`
   padding: 12px 20px;
   border-radius: 10px;
   margin: 8px;
-  background-color: rgb(777);
+  background-color: rgb(255,0,0);
 `;
 
 const IMG = styled.img`
