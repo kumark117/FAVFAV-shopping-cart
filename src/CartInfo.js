@@ -18,7 +18,8 @@ const numberFormat = val =>
 
 export const CartInfo = ({ cart, increaseQ, decreaseQ, removeFromCart }) => (
   <>
-    cart.map Next!! I'm excited!!
+    <br/>Author: Kumark117<br/>Note: cart.map Next!! I'm excited!!<br/><br/>
+
     {cart.map((item, i) => (
       <DetailColumn key={item.name}>
           {item.name} | {item.quantity} x ${item.price} -> {" "}
