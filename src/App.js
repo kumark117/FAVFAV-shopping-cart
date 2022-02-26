@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
 const FixedCart = ({ cartItems, onOpen }) => (
-<div onClick={onOpen} style={{float:"right"}}>
+<div onClick={onOpen} style={{float:"right", color:"green", marginRight:"30px"}}>
 Cimpress Cart
 <div>
   <FontAwesomeIcon size="2x" icon={faShoppingCart} />
@@ -96,7 +96,7 @@ function App() {
 
       <FixedCart onOpen={() => isCartOpen(true)} cartItems={cartCountTotal} />
 
-        <h1>Shopping Cart App</h1>
+        <h1 style={{color: "green"}}>Interview: Shopping Cart App</h1>
         <ListedItems
           items={items}
           addToCart={addToCart}
