@@ -51,9 +51,12 @@ function App() {
   const decreaseQuantity =  i => {
       setCart(prevCart =>
         prevCart.map((item, o) => {
-          if (i === o && item.quantity > 1) {
+          if( item.quantity > 1) {
             return { ...item, quantity: item.quantity - 1 };
-          }
+           }
+           else if (item.quantity === 1) { //PATCH_KUMAR 
+              removeFromCart(i);
+           }
           return item;
         })
       );
@@ -73,7 +76,7 @@ function App() {
     setItems(state =>
       state.map(item => {
         if (item.name === chosenItem) {
-          return { ...item, inCart: false, quantity: 1 };
+          return { ...item, inCart: false /*, quantity: 1*/ };
         }
         return item;
       })
