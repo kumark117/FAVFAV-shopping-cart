@@ -17,6 +17,9 @@ Cimpress Cart
 </div>
 );
 
+const numberFormat = val =>
+  Number.isInteger(val) ? val : val.toFixed(2);
+  
 function App() {
   const [cart, setCart] = useState([]);
   const [items, setItems] = useState(API);
@@ -28,7 +31,7 @@ function App() {
         if (i === p) {
           setCart([
             ...cart,
-            { name: item.name, price: item.price, quantity: 1/*item.quantity*/ }
+            { name: item.name, price: numberFormat(item.price*(1-item.discount/100)), quantity: 1/*item.quantity*/ }
           ]);
           return { ...item, inCart: true };
         }

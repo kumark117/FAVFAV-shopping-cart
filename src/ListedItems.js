@@ -2,6 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import { Button } from "./Button";
 
+const numberFormat = val =>
+  Number.isInteger(val) ? val : val.toFixed(2);
+
 export const ListedItems = ({
   items,
   increaseCount,
@@ -11,8 +14,10 @@ export const ListedItems = ({
   <Wrapper>
     {items.map((item, i) => (
       <Column key={item.name}>
-        <h4>{item.name} {" "}
-        ${item.price}
+        <h4>{item.name} {" "} ${numberFormat(item.price*(1-item.discount/100))}
+        <div style={{textDecoration: "line-through", color:"darkblue"}}>
+          ${item.price}
+        </div>
         </h4>
         <IMG src={item.src} alt={item.name} />
         {!item.inCart && (
