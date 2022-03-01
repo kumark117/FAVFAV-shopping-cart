@@ -8,10 +8,10 @@ export const CartDetails = ({
   cart,
   increaseQ,
   decreaseQ,
-  cartCountTotal,
   removeFromCart,
   open,
-  onClose
+  onClose,
+  cartCountTotal
 }) => {
   return (
     <OpenWrapper open={open}>
@@ -20,7 +20,7 @@ export const CartDetails = ({
         {!cart.length && <>Cart is empty</>}
         {!!cart.length && (
           <>
-            <CartTotals cart={cart} cartCountTotal={cartCountTotal} />
+            <CartTotals cart={cart} cartCountTotal={cartCountTotal}/>
             <CartInfo
               cart={cart}
               increaseQ={increaseQ}
